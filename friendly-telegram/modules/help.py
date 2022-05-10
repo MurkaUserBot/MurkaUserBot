@@ -33,7 +33,7 @@ class HelpMod(loader.Module):
                                      "and they can be run with <code>{}&lt;command&gt;</code>"),
                "single_cmd": "\n• <code><u>{}</u></code>\n",
                "undoc_cmd": "There is no documentation for this command",
-               "all_header": ("<b>Help for</b> <a href='https://t.me/friendlytgbot'>Murka-Userbot</a>\n"
+               "all_header": ("<b>Help for</b> <a href='https://t.me/MurkaUserBot_ua'>Murka-Userbot</a>\n"
                               "For more help on how to use a command, type <code>{}help &lt;module name&gt;</code>\n\n"
                               "<b>Available Modules:</b>"),
                "mod_tmpl": "\n• <b>{}</b>",
@@ -41,8 +41,8 @@ class HelpMod(loader.Module):
                "cmd_tmpl": ", {}",
                "footer": ("\n\nYou can <b>read more</b> about most commands "
                           "<a href='https://friendly-telegram.gitlab.io'>here</a>"),
-               "joined": "<b>Joined to</b> <a href='https://t.me/friendlytgbot'>support channel</a>",
-               "join": "<b>Join the</b> <a href='https://t.me/friendlytgbot'>support channel</a>"}
+               "joined": "<b>Joined to</b> <a href='https://t.me/MurkaUserBot_ua'>support channel</a>",
+               "join": "<b>Join the</b> <a href='https://t.me/MurkaUserBot_ua'>support channel</a>"}
 
     @loader.unrestricted
     async def helpcmd(self, message):
@@ -104,7 +104,7 @@ class HelpMod(loader.Module):
     async def supportcmd(self, message):
         """Joins the support chat"""
         if not self.is_bot and await self.allmodules.check_security(message, security.OWNER | security.SUDO):
-            await self.client(JoinChannelRequest("https://t.me/friendlytgbot"))
+            await self.client(JoinChannelRequest("https://t.me/MurkaUserBot_ua"))
             await utils.answer(message, self.strings("joined", message))
         else:
             await utils.answer(message, self.strings("join", message))

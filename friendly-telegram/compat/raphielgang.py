@@ -209,7 +209,7 @@ class RaphielgangConfig():
         self.SPOTIFY_USERNAME = None
         self.SPOTIFY_PASS = None
         self.ISAFK = False
-        self.ALIVE_NAME = "`**PPE bad! Use **[friendly-telegram](https://t.me/friendlytgbot)`."
+        self.ALIVE_NAME = "`**PPE bad! Use **[friendly-telegram](https://t.me/MurkaUserBot_ua)`."
 
         self.GDRIVE_FOLDER = self.GDRIVE_FOLDER_ID
         self.GENIUS_API_TOKEN = ""
