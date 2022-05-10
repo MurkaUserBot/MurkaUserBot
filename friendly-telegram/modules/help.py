@@ -33,7 +33,7 @@ class HelpMod(loader.Module):
                                      "and they can be run with <code>{}&lt;command&gt;</code>"),
                "single_cmd": "\n• <code><u>{}</u></code>\n",
                "undoc_cmd": "There is no documentation for this command",
-               "all_header": ("<b>Help for</b> <a href='https://t.me/friendlytgbot'>Friendly-Telegram</a>\n"
+               "all_header": ("<b>Help for</b> <a href='https://t.me/friendlytgbot'>Murka-Userbot</a>\n"
                               "For more help on how to use a command, type <code>{}help &lt;module name&gt;</code>\n\n"
                               "<b>Available Modules:</b>"),
                "mod_tmpl": "\n• <b>{}</b>",
