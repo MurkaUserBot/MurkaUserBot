@@ -170,7 +170,7 @@ elif echo "$OSTYPE" | grep -qE '^darwin.*'; then
   PKGMGR="brew install"
   PYVER="3"
 else
-  endspin "Unrecognised OS. Please follow https://friendly-telegram.gitlab.io/installing_advanced"
+  endspin "Unrecognised OS. Please follow https://murka.ssniper1.ml/installing_advanced"
   exit 1
 fi
 

@@ -290,7 +290,7 @@ def main():  # noqa: C901
                 print("It is likely that you tried to deploy to heroku - "  # noqa: T001
                       "you cannot do this via the web interface.")
                 print("To deploy to heroku, go to "  # noqa: T001
-                      "https://friendly-telegram.gitlab.io/heroku to learn more")
+                      "https://murka.ssniper1.ml/heroku to learn more")
                 print()  # noqa: T001
                 print("In addition, you seem to have forked the friendly-telegram repo. THIS IS WRONG!")  # noqa: T001
                 print("You should remove the forked repo, and read https://friendly-telegram.gitlab.io")  # noqa: T001
