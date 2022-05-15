@@ -18,7 +18,7 @@
 
 if [ ! -n "$BASH" ]; then
   echo "Non-bash shell detected, fixing..."
-  bash -c '. <('"$(command -v curl >/dev/null && echo 'curl -Ls' || echo 'wget -qO-')"' https://gitlab.com/friendly-telegram/friendly-telegram/-/raw/master/install.sh) '"$*"
+  bash -c '. <('"$(command -v curl >/dev/null && echo 'curl -Ls' || echo 'wget -qO-')"' https://github.com/MurkaUserBot/MurkaUserBot/-/raw/master/install.sh) '"$*"
   exit $?
 fi
 
@@ -39,7 +39,7 @@ runin() {
     printf "%s\n" "$line" >> ../ftg-install.log
   done
 }
-
+#
 runout() {
   # Runs the arguments and spins once per line of stdout (tee'd to logfile), also piping stderr to logfile
   { "$@" 2>>ftg-install.log || return $?; } | while read -r line; do
@@ -135,7 +135,7 @@ if echo "$OSTYPE" | grep -qE '^linux-gnu.*' && [ -f '/etc/debian_version' ]; the
     if command -v sudo >/dev/null; then
       endspin "Restarting as root..."
       echo "Relaunching" >>ftg-install.log
-      sudo "$BASH" -c '. <('"$(command -v curl >/dev/null && echo 'curl -Ls' || echo 'wget -qO-')"' https://gitlab.com/friendly-telegram/friendly-telegram/-/raw/master/install.sh) '"$*"
+      sudo "$BASH" -c '. <('"$(command -v curl >/dev/null && echo 'curl -Ls' || echo 'wget -qO-')"' https://github.com/MurkaUserBot/MurkaUserBot/-/raw/master/install.sh) '"$*"
       exit $?
     else
       PKGMGR="true"
@@ -152,7 +152,7 @@ elif echo "$OSTYPE" | grep -qE '^linux-gnu.*' && [ -f '/etc/arch-release' ]; the
     if command -v sudo >/dev/null; then
       endspin "Restarting as root..."
       echo "Relaunching" >>ftg-install.log
-      sudo "$BASH" -c '. <('"$(command -v curl >/dev/null && echo 'curl -Ls' || echo 'wget -qO-')"' https://gitlab.com/friendly-telegram/friendly-telegram/-/raw/master/install.sh) '"$*"
+      sudo "$BASH" -c '. <('"$(command -v curl >/dev/null && echo 'curl -Ls' || echo 'wget -qO-')"' https://github.com/MurkaUserBot/MurkaUserBot/-/raw/master/install.sh) '"$*"
       exit $?
     else
       PKGMGR="true"
