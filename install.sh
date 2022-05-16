@@ -18,7 +18,7 @@
 
 if [ ! -n "$BASH" ]; then
   echo "Non-bash shell detected, fixing..."
-  bash -c '. <('"$(command -v curl >/dev/null && echo 'curl -Ls' || echo 'wget -qO-')"' https://gitlab.com/friendly-telegram/friendly-telegram/-/raw/master/install.sh) '"$*"
+  bash -c '. <('"$(command -v curl >/dev/null && echo 'curl -Ls' || echo 'wget -qO-')"' https://github.com/MurkaUserBot/MurkaUserBot/-/raw/master/install.sh) '"$*"
   exit $?
 fi
 
@@ -64,17 +64,12 @@ errorout() {
 banner() {
   clear
   clear
-  printf '%s\n' "   ___    _             ____    "
-  printf '%s\n' "  / _/___(_)__ ___  ___/ / /_ __"
-  printf '%s\n' " / _/ __/ / -_) _ \\/ _  / / // /"
-  printf '%s\n' "/_//_/ /_/\\__/_//_/\\_,_/_/\\_, / "
-  printf '%s\n' "                         /___/  "
-  printf '%s\n' "  __      __                      "
-  printf '%s\n' " / /____ / /__ ___ ________ ___ _ "
-  printf '%s\n' "/ __/ -_) / -_) _ \`/ __/ _ \`/  ' \\"
-  printf '%s\n' "\\__/\\__/_/\\__/\\_, /_/  \\_,_/_/_/_/"
-  printf '%s\n' "             /___/                "
-  printf '%s\n' ""
+  printf '%s\n' " ___  ___              _            _   _                  ______         _   "
+  printf '%s\n' " |  \/  |             | |          | | | |                 | ___ \       | |  "
+  printf '%s\n' " | .  . | _   _  _ __ | | __  __ _ | | | | ___   ___  _ __ | |_/ /  ___  | |_ "
+  printf '%s\n' " | |\/| || | | || '__|| |/ / / _` || | | |/ __| / _ \| '__|| ___ \ / _ \ | __|"
+  printf '%s\n' " | |  | || |_| || |   |   < | (_| || |_| |\__ \|  __/| |   | |_/ /| (_) || |_ "
+  printf '%s\n' " \_|  |_/ \__,_||_|   |_|\_\ \__,_| \___/ |___/ \___||_|   \____/  \___/  \__|"
 }
 
 ##############################################################################
@@ -135,7 +130,7 @@ if echo "$OSTYPE" | grep -qE '^linux-gnu.*' && [ -f '/etc/debian_version' ]; the
     if command -v sudo >/dev/null; then
       endspin "Restarting as root..."
       echo "Relaunching" >>ftg-install.log
-      sudo "$BASH" -c '. <('"$(command -v curl >/dev/null && echo 'curl -Ls' || echo 'wget -qO-')"' https://gitlab.com/friendly-telegram/friendly-telegram/-/raw/master/install.sh) '"$*"
+      sudo "$BASH" -c '. <('"$(command -v curl >/dev/null && echo 'curl -Ls' || echo 'wget -qO-')"' https://github.com/MurkaUserBot/MurkaUserBot/-/raw/master/install.sh) '"$*"
       exit $?
     else
       PKGMGR="true"
@@ -152,7 +147,7 @@ elif echo "$OSTYPE" | grep -qE '^linux-gnu.*' && [ -f '/etc/arch-release' ]; the
     if command -v sudo >/dev/null; then
       endspin "Restarting as root..."
       echo "Relaunching" >>ftg-install.log
-      sudo "$BASH" -c '. <('"$(command -v curl >/dev/null && echo 'curl -Ls' || echo 'wget -qO-')"' https://gitlab.com/friendly-telegram/friendly-telegram/-/raw/master/install.sh) '"$*"
+      sudo "$BASH" -c '. <('"$(command -v curl >/dev/null && echo 'curl -Ls' || echo 'wget -qO-')"' https://github/MurkaUserBot/MurkaUserBot/-/raw/master/install.sh) '"$*"
       exit $?
     else
       PKGMGR="true"
