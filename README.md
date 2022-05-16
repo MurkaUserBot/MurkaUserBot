@@ -15,4 +15,5 @@ They can be found [here](https://murka.ssniper1.ml).
 ### Support
 We also have a dedicated Telegram support group. Got any doubts or issues while setting-up? Shoot 'em here! **Please read the docs first** though, to make sure your question isn't already answered!
 
-[MUBMUB Support Group](https://t.me/MurkaUserBot_ua "Telegram").
+[MUB Support Group](https://t.me/MurkaUserBot_ua "Telegram").
+[MUB Channel](https://t.me/MurkaUserBot "Telegram").
