@@ -43,7 +43,7 @@ class MuteMod(loader.Module):
             await message.edit("<b>[swmute] Ты опять можешь писать</b>")
 
     async def setmutecmd(self, message):
-        """Настройки пидор-мута. Используй: .setmute <clear/clearall (по желанию)>."""
+        """Настройки swmute. Используй: .setmute <clear/clearall (по желанию)>."""
         try:
             args = utils.get_args_raw(message)
             mutes = self.db.get("Mute", "mutes", {})
