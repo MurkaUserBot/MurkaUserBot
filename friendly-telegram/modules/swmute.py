@@ -3,7 +3,7 @@ from .. import loader, utils
 
 @loader.tds
 class MuteMod(loader.Module):
-    """swmute."""
+    """Swmute."""
     strings = {'name': 'swmute'}
 
     async def client_ready(self, client, db):
@@ -73,3 +73,4 @@ class MuteMod(loader.Module):
                 if message.sender_id == int(_):
                     await message.client.delete_messages(message.chat_id, message.id)
         except: pass
+#
