@@ -188,8 +188,7 @@ class UpdaterMod(loader.Module):
             msg = self.strings("success") if random.randint(0, 10) != 0 else self.strings["success_meme"]
         if self.config["AUDIO"]:
             #await client.send_file(self._db.get(__name__, "selfupdatechat"), STARTUP, caption=msg, voice_note=True)
-            await client.delete_messages(self._db.get(__name__, "selfupdatechat"),
-                                         [self._db.get(__name__, "selfupdatemsg")])
+            pass
         else:
             await client.edit_message(self._db.get(__name__, "selfupdatechat"),
                                       self._db.get(__name__, "selfupdatemsg"), msg)
