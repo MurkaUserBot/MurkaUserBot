@@ -66,8 +66,6 @@ class UpdaterMod(loader.Module):
         """Restarts the userbot"""
         if self.config["AUDIO"]:
             msg = (await utils.answer(message, self.strings("restarting_caption", message)))[0]
-                        #msg = (await utils.answer(message, SHUTDOWN, voice_note=True,
-                                      #caption=self.strings("restarting_caption", message)))[0]
         else:
             msg = (await utils.answer(message, self.strings("restarting_caption", message)))[0]
         await self.restart_common(msg)
@@ -138,10 +136,8 @@ class UpdaterMod(loader.Module):
         msgs = await utils.answer(message, self.strings("downloading", message))
         req_update = await self.download_common()
         if self.config["AUDIO"]:
-            #message = await message.client.send_file(message.chat_id, SHUTDOWN,
-                                                    #caption=self.strings("installing", message), voice_note=True)
-            pass
-            #await asyncio.gather(*[msg.delete() for msg in msgs])
+            message = (await utils.answer(message, self.strings("installing", message)))[0]
+
         else:
             message = (await utils.answer(message, self.strings("installing", message)))[0]
         heroku_key = os.environ.get("heroku_api_token")
@@ -154,9 +150,7 @@ class UpdaterMod(loader.Module):
             self._db.set(__name__, "selfupdatechat", None)
             self._db.set(__name__, "selfupdatemsg", None)
             if self.config["AUDIO"]:
-                #await message.client.send_file(message.chat_id, STARTUP, voice_note=True,
-                                            #caption=self.strings("already_updated", message))
-                pass
+                await utils.answer(message, self.strings("already_updated", message))
             else:
                 await utils.answer(message, self.strings("already_updated", message))
         else:
@@ -188,8 +182,8 @@ class UpdaterMod(loader.Module):
             logger.debug("Self update successful! Edit message")
             msg = self.strings("success") if random.randint(0, 10) != 0 else self.strings["success_meme"]
         if self.config["AUDIO"]:
-            #await client.send_file(self._db.get(__name__, "selfupdatechat"), STARTUP, caption=msg, voice_note=True)
-            pass
+            await client.edit_message(self._db.get(__name__, "selfupdatechat"),
+                                      self._db.get(__name__, "selfupdatemsg"), msg)
         else:
             await client.edit_message(self._db.get(__name__, "selfupdatechat"),
                                       self._db.get(__name__, "selfupdatemsg"), msg)
