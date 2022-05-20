@@ -140,7 +140,8 @@ class UpdaterMod(loader.Module):
         if self.config["AUDIO"]:
             #message = await message.client.send_file(message.chat_id, SHUTDOWN,
                                                     #caption=self.strings("installing", message), voice_note=True)
-            await asyncio.gather(*[msg.delete() for msg in msgs])
+            pass
+            #await asyncio.gather(*[msg.delete() for msg in msgs])
         else:
             message = (await utils.answer(message, self.strings("installing", message)))[0]
         heroku_key = os.environ.get("heroku_api_token")
@@ -155,7 +156,7 @@ class UpdaterMod(loader.Module):
             if self.config["AUDIO"]:
                 #await message.client.send_file(message.chat_id, STARTUP, voice_note=True,
                                             #caption=self.strings("already_updated", message))
-                await message.delete()
+                pass
             else:
                 await utils.answer(message, self.strings("already_updated", message))
         else:
