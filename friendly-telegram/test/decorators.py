@@ -1,3 +1,7 @@
+
+#    MurkaUserBot (telegram userbot)
+#    Copyright (C) 2022 The Authors
+
 import functools
 import shlex
 import telethon

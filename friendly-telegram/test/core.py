@@ -1,3 +1,7 @@
+
+#    MurkaUserBot (telegram userbot)
+#    Copyright (C) 2022 The Authors
+
 import asyncio
 import os
 
