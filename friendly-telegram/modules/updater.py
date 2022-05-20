@@ -42,14 +42,14 @@ class UpdaterMod(loader.Module):
     """Updates itself"""
     strings = {"name": "Updater",
                "source": "<b>Read the source code from</b> <a href='{}'>here</a>",
-               "restarting_caption": "<b>Restarting...</b>",
-               "downloading": "<b>Downloading updates...</b>",
+               "restarting_caption": "<b>🔃 Restarting...</b>",
+               "downloading": "<b>⬇️ Downloading updates...</b>",
                "downloaded": ("<b>Downloaded successfully.\nPlease type</b> "
                               "<code>.restart</code> <b>to restart the bot.</b>"),
                "already_updated": "<b>Already up to date!</b>",
                "installing": "<b>Installing updates...</b>",
-               "success": "<b>Restart successful!</b>",
-               "success_meme": "<b>Restart failed successfully‽</b>",
+               "success": "<b>✅ Restart successful!</b>",
+               "success_meme": "<b>⁉️ Restart failed successfully‽</b>",
                "heroku_warning": ("Heroku API key has not been set. Update was successful but updates will "
                                   "reset every time the bot restarts."),
                "origin_cfg_doc": "Git origin URL, for where to update from",
