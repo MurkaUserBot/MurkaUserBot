@@ -103,8 +103,8 @@ if [ ! x"" = x"$DYNO" ] && ! command -v python >/dev/null; then
   export PATH="/app/.heroku/python/bin:$PATH"  # Prefer the bootstrapped python, incl. pip, over the system one.
 fi
 
-if [ -d "MurkaUserBot/MurkaUserBot" ]; then
-  cd MurkaUserBot || { endspin "Failed to chdir"; exit 6; }
+if [ -d "friendly-telegram/friendly-telegram" ]; then
+  cd friendly-telegram || { endspin "Failed to chdir"; exit 6; }
   DIR_CHANGED="yes"
 fi
 if [ -f ".setup_complete" ] || [ -d "friendly-telegram" -a ! x"" = x"$DYNO" ]; then
@@ -158,8 +158,8 @@ elif echo "$OSTYPE" | grep -qE '^linux-gnu.*' && [ -f '/etc/arch-release' ]; the
   fi
   PYVER="3"
 elif echo "$OSTYPE" | grep -qE '^linux-android.*'; then
-  runout pkg up
-  PKGMGR="apt install -y"
+  runout apt-get update
+  PKGMGR="apt-get install -y"
   PYVER=""
 elif echo "$OSTYPE" | grep -qE '^darwin.*'; then
   if ! command -v brew >/dev/null; then
@@ -198,9 +198,9 @@ if [ ! x"$SUDO_USER" = x"" ]; then
 fi
 
 # shellcheck disable=SC2086
-${SUDO_CMD}rm -rf MurkaUserBot
+${SUDO_CMD}rm -rf friendly-telegram
 # shellcheck disable=SC2086
-runout ${SUDO_CMD}git clone https://gitlab.com/MurkaUserBot/MurkaUserBot || { errorout "Clone failed."; exit 3; }
+runout ${SUDO_CMD}git clone https://gitlab.com/friendly-telegram/friendly-telegram || { errorout "Clone failed."; exit 3; }
 cd friendly-telegram || { endspin "Failed to chdir"; exit 7; }
 # shellcheck disable=SC2086
 runin ${SUDO_CMD}"python$PYVER" -m pip install --upgrade pip setuptools wheel --user
@@ -210,4 +210,4 @@ touch .setup_complete
 endspin "Installation successful. Launching setup interface..."
 rm -f ../ftg-install.log
 # shellcheck disable=SC2086,SC2015
-${SUDO_CMD}"python$PYVER" -m MurkaUserBot "$@" || { echo "Python scripts failed"; exit 5; }
+${SUDO_CMD}"python$PYVER" -m friendly-telegram "$@" || { echo "Python scripts failed"; exit 5; }
