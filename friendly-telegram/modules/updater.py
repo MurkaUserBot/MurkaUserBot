@@ -48,6 +48,7 @@ class UpdaterMod(loader.Module):
                               "<code>.restart</code> <b>to restart the bot.</b>"),
                "already_updated": "<b>Already up to date!</b>",
                "installing": "<b>Installing updates...</b>",
+               "update_succesful": "<b>✅ Update successful!</b>",
                "success": "<b>✅ Restart successful!</b>",
                "success_meme": "<b>⁉️ Restart failed successfully‽</b>",
                "heroku_warning": ("Heroku API key has not been set. Update was successful but updates will "
@@ -180,7 +181,7 @@ class UpdaterMod(loader.Module):
             msg = self.strings("heroku_warning")
         else:
             logger.debug("Self update successful! Edit message")
-            msg = self.strings("success") if random.randint(0, 10) != 0 else self.strings["success_meme"]
+            msg = self.strings("update_succesful") if random.randint(0, 10) != 0 else self.strings["success_meme"]
         if self.config["AUDIO"]:
             await client.edit_message(self._db.get(__name__, "selfupdatechat"),
                                       self._db.get(__name__, "selfupdatemsg"), msg)
