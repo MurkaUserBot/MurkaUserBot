@@ -110,7 +110,7 @@ class LoaderMod(loader.Module):
     def __init__(self):
         super().__init__()
         self.config = loader.ModuleConfig("MODULES_REPO",
-                                          "https://raw.githubusercontent.com/MurkaUserBot/official_mods/",
+                                          "https://raw.githubusercontent.com/MurkaUserBot/official_mods/main/",
                                           lambda m: self.strings("repo_config_doc", m))
 
     @loader.owner
