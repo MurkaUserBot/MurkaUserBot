@@ -8,7 +8,7 @@ from .. import loader, utils
 @loader.tds
 class MuteMod(loader.Module):
     """Swmute."""
-    strings = {'name': 'swmute'}
+    strings = {'name': 'Swmute'}
 
     async def client_ready(self, client, db):
         self.db = db
