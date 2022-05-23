@@ -181,7 +181,7 @@ class UpdaterMod(loader.Module):
             msg = self.strings("heroku_warning")
         else:
             logger.debug("Self update successful! Edit message")
-            msg = self.strings("update_succesful") if random.randint(0, 10) != 0 else self.strings["success_meme"]
+            msg = self.strings("restart_succesful") if random.randint(0, 10) != 0 else self.strings["success_meme"]
         if self.config["AUDIO"]:
             await client.edit_message(self._db.get(__name__, "selfupdatechat"),
                                       self._db.get(__name__, "selfupdatemsg"), msg)
