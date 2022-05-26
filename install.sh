@@ -67,12 +67,13 @@ errorout() {
 banner() {
   clear
   clear
-  echo "8888ba.88ba                    dP                dP     dP                             888888ba             dP   "
-  echo "88  \`8b  \`8b                   88                88     88                             88    \`8b            88   "
-  echo "88   88   88 dP    dP 88d888b. 88  .dP  .d8888b. 88     88 .d8888b. .d8888b. 88d888b. a88aaaa8P\' .d8888b. d8888P "
-  echo "88   88   88 88    88 88\'  \`88 88888\"   88\'  \`88 88     88 Y8ooooo. 88ooood8 88\'  \`88  88   \`8b. 88\'  \`88   88   "
-  echo "88   88   88 88.  .88 88       88  \`8b. 88.  .88 Y8.   .8P       88 88.  ... 88        88    .88 88.  .88   88   "
-  echo "dP   dP   dP \`88888P\' dP       dP   \`YP \`88888P8 \`Y88888P\' \`88888P\' \`88888P\' dP        88888888P `88888P\'   dP   "
+  echo "##     ## ##     ## ########  ##    ##    ###    ##     ## ########  "
+  echo "###   ### ##     ## ##     ## ##   ##    ## ##   ##     ## ##     ## "
+  echo "#### #### ##     ## ##     ## ##  ##    ##   ##  ##     ## ##     ## "
+  echo "## ### ## ##     ## ########  #####    ##     ## ##     ## ########  "
+  echo "##     ## ##     ## ##   ##   ##  ##   ######### ##     ## ##     ## "
+  echo "##     ## ##     ## ##    ##  ##   ##  ##     ## ##     ## ##     ## "
+  echo "##     ##  #######  ##     ## ##    ## ##     ##  #######  ########  "
 }
 
 ##############################################################################
@@ -200,7 +201,7 @@ fi
 # shellcheck disable=SC2086
 ${SUDO_CMD}rm -rf friendly-telegram
 # shellcheck disable=SC2086
-runout ${SUDO_CMD}git clone https://gitlab.com/friendly-telegram/friendly-telegram || { errorout "Clone failed."; exit 3; }
+runout ${SUDO_CMD}git clone https://github.com/MurkaUserBot/MurkaUserBot || { errorout "Clone failed."; exit 3; }
 cd friendly-telegram || { endspin "Failed to chdir"; exit 7; }
 # shellcheck disable=SC2086
 runin ${SUDO_CMD}"python$PYVER" -m pip install --upgrade pip setuptools wheel --user
