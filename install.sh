@@ -104,7 +104,7 @@ if [ ! x"" = x"$DYNO" ] && ! command -v python >/dev/null; then
   export PATH="/app/.heroku/python/bin:$PATH"  # Prefer the bootstrapped python, incl. pip, over the system one.
 fi
 
-if [ -d "friendly-telegram/friendly-telegram" ]; then
+if [ -d "MurkaUserBot/friendly-telegram" ]; then
   cd friendly-telegram || { endspin "Failed to chdir"; exit 6; }
   DIR_CHANGED="yes"
 fi
@@ -169,7 +169,7 @@ elif echo "$OSTYPE" | grep -qE '^darwin.*'; then
   PKGMGR="brew install"
   PYVER="3"
 else
-  endspin "Unrecognised OS. Please follow https://murka.ssniper1.ml/installing_advanced"
+  endspin "Unrecognised OS. Please follow https://murkauserbot.ml/installing_advanced"
   exit 1
 fi
 
