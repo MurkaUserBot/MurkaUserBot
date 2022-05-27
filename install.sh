@@ -202,7 +202,7 @@ fi
 ${SUDO_CMD}rm -rf friendly-telegram
 # shellcheck disable=SC2086
 runout ${SUDO_CMD}git clone https://github.com/MurkaUserBot/MurkaUserBot || { errorout "Clone failed."; exit 3; }
-cd friendly-telegram || { endspin "Failed to chdir"; exit 7; }
+cd MurkaUserBot || { endspin "Failed to chdir"; exit 7; }
 # shellcheck disable=SC2086
 runin ${SUDO_CMD}"python$PYVER" -m pip install --upgrade pip setuptools wheel --user
 # shellcheck disable=SC2086
