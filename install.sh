@@ -105,7 +105,7 @@ if [ ! x"" = x"$DYNO" ] && ! command -v python >/dev/null; then
 fi
 
 if [ -d "MurkaUserBot/friendly-telegram" ]; then
-  cd friendly-telegram || { endspin "Failed to chdir"; exit 6; }
+  cd MurkaUserBot || { endspin "Failed to chdir"; exit 6; }
   DIR_CHANGED="yes"
 fi
 if [ -f ".setup_complete" ] || [ -d "friendly-telegram" -a ! x"" = x"$DYNO" ]; then
