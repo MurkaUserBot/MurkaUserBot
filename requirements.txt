@@ -16,3 +16,4 @@ meval >= 2.4, ~= 2.4
 
 # Web
 aiohttp_jinja2 ~= 1.5, >= 1.2.0
+requests ~=2.27.1
