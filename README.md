@@ -19,8 +19,8 @@ You can support us at:
 ### Support
 We also have a dedicated Telegram support group. Got any doubts or issues while setting-up? Shoot 'em here! **Please read the docs first** though, to make sure your question isn't already answered!
 
-[MUB Support Group](https://t.me/MurkaUserBot_ua "Telegram")
+[MUB Russian Support Group](https://t.me/MurkaUserBot_ua "Telegram")
 
 [MUB Channel](https://t.me/MurkaUserBot "Telegram")
  
-[MUB English Channel](https://t.me/murka_en "Telegram")
+[MUB English Support Group](https://t.me/murka_en "Telegram")
