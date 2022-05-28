@@ -51,7 +51,7 @@ class CloudBackend():
 
     async def _find_data_channel(self):
         async for dialog in self._client.iter_dialogs(None, ignore_migrated=True):
-            if dialog.name == f"MurkaUserBot database" and dialog.is_channel:
+            if dialog.name == f"murka-{self._me.user_id}-database" and dialog.is_channel:
                 members = await self._client.get_participants(dialog, limit=2)
                 if len(members) != 1:
                     continue
@@ -62,14 +62,14 @@ class CloudBackend():
         async with self._anti_double_lock:
             if not self._data_already_exists:
                 self._data_already_exists = True
-                return (await self._client(CreateChannelRequest(f"MurkaUserBot database",
+                return (await self._client(CreateChannelRequest(f"murka-{self._me.user_id}-database",
                                                                 "// Don't touch", megagroup=True))).chats[0]
             else:
                 return await self._find_data_channel()
 
     async def _find_asset_channel(self):
         async for dialog in self._client.iter_dialogs(None, ignore_migrated=True):
-            if dialog.name == f"MurkaUserBot assets" and dialog.is_channel:
+            if dialog.name == f"murka-{self._me.user_id}-assets" and dialog.is_channel:
                 members = await self._client.get_participants(dialog, limit=2)
                 if len(members) != 1:
                     continue
