@@ -22,3 +22,5 @@ We also have a dedicated Telegram support group. Got any doubts or issues while 
 [MUB Support Group](https://t.me/MurkaUserBot_ua "Telegram")
 
 [MUB Channel](https://t.me/MurkaUserBot "Telegram")
+ 
+[MUB English Channel](https://t.me/murka_en "Telegram")
