@@ -36,16 +36,16 @@ class HelpMod(loader.Module):
                                      "and they can be run with <code>{}&lt;command&gt;</code>"),
                "single_cmd": "\n• <code><u>{}</u></code>\n",
                "undoc_cmd": "There is no documentation for this command",
-               "all_header": ("<b>Help for</b> <a href='https://t.me/MurkaUserBot_ua'>Murka-Userbot</a>\n"
+               "all_header": ("<b>Help for</b> <a href='https://t.me/MurkaUserBot'>Murka-Userbot</a>\n"
                               "For more help on how to use a command, type <code>{}help &lt;module name&gt;</code>\n\n"
                               "<b>Available Modules:</b>"),
                "mod_tmpl": "\n• <b>{}</b>",
                "first_cmd_tmpl": ": <code>{}",
                "cmd_tmpl": ", {}",
                "footer": ("\n\nYou can <b>read more</b> about most commands "
-                          "<a href='https://murka.ssniper1.ml/'>here</a>"),
-               "joined": "<b>Joined to</b> <a href='https://t.me/MurkaUserBot_ua'>support channel</a>",
-               "join": "<b>Join the</b> <a href='https://t.me/MurkaUserBot_ua'>support channel</a>"}
+                          "<a href='https://murkauserbot.ml/'>here</a>"),
+               "joined": "<b>Joined to</b> <a href='https://t.me/MurkaUserBot'>support channel</a>",
+               "join": "<b>Join the</b> <a href='https://t.me/MurkaUserBot'>support channel</a>"}
 
     @loader.unrestricted
     async def helpcmd(self, message):
