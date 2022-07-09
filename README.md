@@ -14,7 +14,7 @@ They can be found [here](https://murka.ssniper1.ml).
 
 ### Donations
 You can support us at:
-[QIWI](https://qiwi.com/n/SSNIPER1)
+
 
 ### Support
 We also have a dedicated Telegram support group. Got any doubts or issues while setting-up? Shoot 'em here! **Please read the docs first** though, to make sure your question isn't already answered!
@@ -24,3 +24,5 @@ We also have a dedicated Telegram support group. Got any doubts or issues while 
 [MUB Channel](https://t.me/MurkaUserBot "Telegram")
  
 [MUB English Support Group](https://t.me/murka_en "Telegram")
+
+### Owners: [owner1](t.me/regularftguser) [owner2](t.me/ssniper1) [owner3](t.me/zeromef)
