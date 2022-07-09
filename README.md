@@ -25,4 +25,4 @@ We also have a dedicated Telegram support group. Got any doubts or issues while 
  
 [MUB English Support Group](https://t.me/murka_en "Telegram")
 
-### Owners: [owner1](t.me/regularftguser) [owner2](t.me/ssniper1) [owner3](t.me/zeromef)
+### Owners: [owner1](t.me/regularftguser "Telegram") [owner2](t.me/ssniper1 "Telegram") [owner3](t.me/zeromef "Telegram")
